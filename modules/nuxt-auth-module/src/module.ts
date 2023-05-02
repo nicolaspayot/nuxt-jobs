@@ -20,10 +20,10 @@ export default defineNuxtModule<ModuleOptions>({
             });
         });
 
-        // Add plugins to Nuxt app
+        // Add auth plugin to Nuxt app
         addPlugin(resolve(runtimeDir, 'plugins/auth'));
 
-        // Add composables to Nuxt app
-        addImportsDir(resolve(runtimeDir, 'composables'));
+        // Add store to Nuxt app
+        addImportsDir(resolve(runtimeDir, 'store'));
     },
 });

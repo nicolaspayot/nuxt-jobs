@@ -30,10 +30,11 @@
 </template>
 
 <script setup lang="ts">
+    import {storeToRefs} from 'pinia';
     import {JobItem} from '#components';
     import {definePageMeta, useAuth} from '#imports';
 
-    const {isAdmin} = useAuth();
+    const {isAdmin} = storeToRefs(useAuth());
 
     definePageMeta({
         middleware: 'auth',

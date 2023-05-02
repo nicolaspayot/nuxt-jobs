@@ -1,11 +1,12 @@
+import {Pinia} from 'pinia';
 import {addRouteMiddleware, defineNuxtPlugin, navigateTo} from '#app';
-import {useAuth} from '../composables/useAuth';
+import {useAuth} from '../store/auth.store';
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
     addRouteMiddleware('auth', () => {
-        const {isConnected} = useAuth();
+        const {isConnected} = useAuth(nuxtApp.$pinia as Pinia);
 
-        if (!isConnected.value) {
+        if (!isConnected) {
             return navigateTo('/signin');
         }
     });

@@ -21,7 +21,9 @@
   },
   "dependencies": {
     "@nuxt/kit": "3.4.3",
-    "@nuxtjs/tailwindcss": "6.6.7"
+    "@nuxtjs/tailwindcss": "6.6.7",
+    "@pinia/nuxt": "0.4.9",
+    "pinia": "2.0.35"
   },
   "devDependencies": {
     "@malt/eslint": "workspace:*",
