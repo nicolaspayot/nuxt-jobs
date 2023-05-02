@@ -6,9 +6,6 @@ importers:
 
   apps/nuxt-jobs:
     dependencies:
-      '@malt/nuxt-auth-module':
-        specifier: workspace:*
-        version: link:../../modules/nuxt-auth-module
       '@nuxtjs/tailwindcss':
         specifier: 6.6.7
         version: 6.6.7(rollup@3.21.3)(webpack@5.81.0)
